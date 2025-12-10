@@ -1,10 +1,11 @@
 "use client"
 
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import { motion, useScroll, useTransform } from "motion/react"
 import { AnimatedInput } from "@/components/ui/animated-input"
 import { useLanguage } from "@/lib/language-context"
 import { getTranslation } from "@/lib/translations"
+import { AnimatedSelect } from "./ui/animated-select"
 
 export function ContactSection() {
     const sectionRef = useRef<HTMLDivElement>(null)
@@ -16,7 +17,56 @@ export function ContactSection() {
     const { language } = useLanguage()
     const t = getTranslation(language)
 
+    const [isSubmitting, setIsSubmitting] = useState(false)
+    const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+
     const contentY = useTransform(scrollYProgress, [0, 0.5, 1], ["10%", "0%", "-10%"])
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+        setIsSubmitting(true)
+        setSubmitStatus('idle')
+
+        const formData = new FormData(e.currentTarget)
+        const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            phone: formData.get('phone'),
+            services: formData.get('services'),
+            message: formData.get('message'),
+            language: language,
+        }
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+
+            if (!response.ok) {
+                throw new Error('Error al enviar el formulario')
+            }
+
+            setSubmitStatus('success')
+            const form = e.target as HTMLFormElement
+            if (form) {
+                form.reset()
+            }
+
+            // Resetear el estado después de 5 segundos
+            setTimeout(() => {
+                setSubmitStatus('idle')
+            }, 5000)
+        } catch (error) {
+            console.error('Error:', error)
+            setSubmitStatus('error')
+        } finally {
+            setIsSubmitting(false)
+        }
+    }
 
     return (
         <section
@@ -38,7 +88,7 @@ export function ContactSection() {
                                 {t.contact.title}
                             </motion.h2>
 
-                            <form className="space-y-8">
+                            <form className="space-y-8" onSubmit={handleSubmit}>
                                 <div className="grid gap-8 md:grid-cols-2">
                                     <AnimatedInput label={t.contact.name} placeholder={t.contact.namePlaceholder} name="name" required />
                                     <AnimatedInput
@@ -53,14 +103,20 @@ export function ContactSection() {
                                 <div className="grid gap-8 md:grid-cols-2">
                                     <AnimatedInput
                                         label={t.contact.phone}
-                                        placeholder={t.contact.phonePlaceholder}
+                                        placeholder="+57 300 123 4567"
                                         name="phone"
                                         type="tel"
+                                        required
                                     />
-                                    <AnimatedInput
+                                    <AnimatedSelect
                                         label={t.contact.servicesLabel}
-                                        placeholder={t.contact.servicesPlaceholder}
                                         name="services"
+                                        options={[
+                                            { value: '', label: t.contact.servicesPlaceholder },
+                                            { value: 'Psicoanálisis adulto', label: 'Psicoanálisis adulto' },
+                                            { value: 'Supervisión clínica profesionales', label: 'Supervisión clínica profesionales' },
+                                            { value: 'Grupos de estudio', label: 'Grupos de estudio' },
+                                        ]}
                                         required
                                     />
                                 </div>
@@ -72,13 +128,35 @@ export function ContactSection() {
                                     isTextarea
                                 />
 
+                                {/* Status Messages */}
+                                {submitStatus === 'success' && (
+                                    <motion.div
+                                        initial={{ opacity: 0, y: -10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        className="rounded border border-green-500 bg-green-500/10 p-4 text-green-400"
+                                    >
+                                        ¡Mensaje enviado exitosamente! Te contactaremos pronto.
+                                    </motion.div>
+                                )}
+
+                                {submitStatus === 'error' && (
+                                    <motion.div
+                                        initial={{ opacity: 0, y: -10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        className="rounded border border-red-500 bg-red-500/10 p-4 text-red-400"
+                                    >
+                                        Hubo un error al enviar el mensaje. Por favor, intenta de nuevo.
+                                    </motion.div>
+                                )}
+
                                 <motion.button
                                     type="submit"
-                                    whileHover={{ scale: 1.02, backgroundColor: "#ffffff", color: "#1a1a1a" }}
-                                    whileTap={{ scale: 0.98 }}
-                                    className="mt-8 w-full border border-white bg-transparent py-4 text-center text-white transition-colors duration-300"
+                                    disabled={isSubmitting}
+                                    whileHover={{ scale: isSubmitting ? 1 : 1.02, backgroundColor: isSubmitting ? "transparent" : "#ffffff", color: isSubmitting ? "#ffffff" : "#1a1a1a" }}
+                                    whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
+                                    className="mt-8 w-full border border-white bg-transparent py-4 text-center text-white transition-colors duration-300 disabled:cursor-not-allowed disabled:opacity-50"
                                 >
-                                    {t.contact.send}
+                                    {isSubmitting ? 'Enviando...' : t.contact.send}
                                 </motion.button>
                             </form>
                         </div>
