@@ -24,81 +24,129 @@ const ContactNotificationEmail = ({
 
     return (
         <html>
-            <body>
-                <div style={{ fontFamily: 'sans-serif', maxWidth: '600px', margin: '0 auto' }}>
-                    <h2 style={{ color: '#1a1a1a', borderBottom: '2px solid #8F958B', paddingBottom: '10px' }}>
-                        Nueva Consulta del Sitio Web
-                    </h2>
-
-                    <div style={{ backgroundColor: '#f5f5f5', padding: '20px', borderRadius: '8px', marginTop: '20px' }}>
-                        <p style={{ margin: '10px 0' }}>
-                            <strong>Nombre:</strong> {name}
-                        </p>
-                        <p style={{ margin: '10px 0' }}>
-                            <strong>Email:</strong>{' '}
-                            <a href={`mailto:${email}`} style={{ color: '#8F958B' }}>
-                                {email}
-                            </a>
-                        </p>
-                        {phone && (
-                            <p style={{ margin: '10px 0' }}>
-                                <strong>Teléfono:</strong> {phone}
-                            </p>
-                        )}
-                        <p style={{ margin: '10px 0' }}>
-                            <strong>Servicios de interés:</strong> {services}
-                        </p>
-                        <p style={{ margin: '10px 0' }}>
-                            <strong>Idioma:</strong> {language.toUpperCase()}
-                        </p>
+            <body style={{
+                backgroundColor: '#212529',
+                color: '#d4d4d8',
+                fontFamily: 'system-ui, -apple-system, sans-serif',
+                margin: 0,
+                padding: '32px 16px'
+            }}>
+                <div style={{ maxWidth: '600px', margin: '0 auto' }}>
+                    {/* Header */}
+                    <div style={{ marginBottom: '32px' }}>
+                        <h1 style={{
+                            fontSize: '28px',
+                            color: '#f4f4f5',
+                            margin: 0,
+                            fontWeight: 400
+                        }}>
+                            Eduardo <span style={{ fontWeight: 700, fontStyle: 'italic' }}>Montenegro</span>
+                        </h1>
                     </div>
 
-                    {message && (
-                        <div style={{ marginTop: '20px', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd', borderRadius: '8px' }}>
-                            <strong>Mensaje:</strong>
-                            <p style={{ marginTop: '10px', lineHeight: '1.6' }}>{message}</p>
-                        </div>
-                    )}
+                    {/* Main Card */}
+                    <div style={{
+                        backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                        padding: '32px',
+                        borderRadius: '8px',
+                        border: '1px solid #3f3f46',
+                        marginBottom: '24px'
+                    }}>
+                        <h2 style={{
+                            fontSize: '24px',
+                            fontWeight: 600,
+                            color: '#fafafa',
+                            marginTop: 0,
+                            marginBottom: '24px'
+                        }}>
+                            Nueva Consulta del Sitio Web
+                        </h2>
 
-                    <div style={{ marginTop: '30px', textAlign: 'center' }}>
+                        <div style={{ marginBottom: '16px' }}>
+                            <div style={{ fontSize: '13px', color: '#a1a1aa', marginBottom: '4px' }}>Nombre</div>
+                            <div style={{ color: '#e4e4e7', fontSize: '15px' }}>{name}</div>
+                        </div>
+
+                        <div style={{ marginBottom: '16px' }}>
+                            <div style={{ fontSize: '13px', color: '#a1a1aa', marginBottom: '4px' }}>Email</div>
+                            <a href={`mailto:${email}`} style={{ color: '#60a5fa', textDecoration: 'none' }}>
+                                {email}
+                            </a>
+                        </div>
+
+                        {phone && (
+                            <div style={{ marginBottom: '16px' }}>
+                                <div style={{ fontSize: '13px', color: '#a1a1aa', marginBottom: '4px' }}>Teléfono</div>
+                                <div style={{ color: '#e4e4e7', fontSize: '15px' }}>{phone}</div>
+                            </div>
+                        )}
+
+                        <div style={{ marginBottom: '16px' }}>
+                            <div style={{ fontSize: '13px', color: '#a1a1aa', marginBottom: '4px' }}>Servicio</div>
+                            <div style={{ color: '#e4e4e7', fontSize: '15px' }}>{services}</div>
+                        </div>
+
+                        {message && (
+                            <>
+                                <hr style={{ border: 'none', borderTop: '1px solid #3f3f46', margin: '24px 0' }} />
+                                <div>
+                                    <div style={{ fontSize: '13px', color: '#a1a1aa', marginBottom: '8px' }}>Mensaje</div>
+                                    <div style={{ color: '#e4e4e7', fontSize: '15px', lineHeight: '1.6' }}>
+                                        {message}
+                                    </div>
+                                </div>
+                            </>
+                        )}
+                    </div>
+
+                    {/* Action Buttons */}
+                    <div style={{ display: 'flex', gap: '12px', marginBottom: '32px' }}>
                         <a
                             href={replyEmailLink}
                             style={{
-                                display: 'inline-block',
-                                backgroundColor: '#8F958B',
-                                color: '#ffffff',
-                                padding: '12px 30px',
+                                flex: 1,
+                                padding: '14px 24px',
+                                borderRadius: '6px',
+                                backgroundColor: '#3f3f46',
+                                color: '#f4f4f5',
+                                fontWeight: 500,
                                 textDecoration: 'none',
-                                borderRadius: '5px',
-                                fontWeight: 'bold',
-                                marginRight: '10px',
-                                marginBottom: '10px',
+                                textAlign: 'center',
+                                fontSize: '14px'
                             }}
                         >
-                            📧 Responder por Email
+                            📧 Email
                         </a>
                         {phone && (
                             <a
                                 href={whatsappLink}
                                 style={{
-                                    display: 'inline-block',
-                                    backgroundColor: '#25D366',
+                                    flex: 1,
+                                    padding: '14px 24px',
+                                    borderRadius: '6px',
+                                    backgroundColor: '#16a34a',
                                     color: '#ffffff',
-                                    padding: '12px 30px',
+                                    fontWeight: 500,
                                     textDecoration: 'none',
-                                    borderRadius: '5px',
-                                    fontWeight: 'bold',
-                                    marginBottom: '10px',
+                                    textAlign: 'center',
+                                    fontSize: '14px'
                                 }}
                             >
-                                💬 Responder por WhatsApp
+                                💬 WhatsApp
                             </a>
                         )}
                     </div>
 
-                    <div style={{ marginTop: '30px', fontSize: '12px', color: '#666', borderTop: '1px solid #ddd', paddingTop: '15px' }}>
-                        <p style={{ margin: '5px 0' }}>ID de consulta: {contactId}</p>
-                        <p style={{ margin: '5px 0' }}>Fecha: {new Date().toLocaleString('es-CO', { timeZone: 'America/Bogota' })}</p>
+                    {/* Footer */}
+                    <div style={{ fontSize: '12px', color: '#71717a', textAlign: 'center' }}>
+                        <div>ID: {contactId}</div>
+                        <div style={{ marginTop: '4px' }}>
+                            {new Date().toLocaleString('es-CO', {
+                                timeZone: 'America/Bogota',
+                                dateStyle: 'short',
+                                timeStyle: 'short'
+                            })}
+                        </div>
                     </div>
                 </div>
             </body>
