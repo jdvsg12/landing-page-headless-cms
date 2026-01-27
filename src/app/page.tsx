@@ -4,6 +4,7 @@ import { LanguageProvider } from "@/lib/language-context"
 import { Navbar } from "@/components/navbar"
 import { HeroBanner } from "@/components/hero-banner"
 import { AboutSection } from "@/components/about-section"
+import { MessageSection } from "@/components/message-section"
 import { ServicesSection } from "@/components/services-section"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
@@ -15,6 +16,7 @@ export default function HomePage() {
         <Navbar />
         <HeroBanner />
         <AboutSection />
+        <MessageSection />
         <ServicesSection />
         <ContactSection />
         <div className="relative z-40">

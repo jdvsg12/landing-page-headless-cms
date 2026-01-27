@@ -20,6 +20,10 @@
     "types": [
       "node"
     ],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules"
+    ],
     "plugins": [
       {
         "name": "next"

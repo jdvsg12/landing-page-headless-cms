@@ -157,13 +157,10 @@ export function Navbar() {
     )
 }
 
-// Subcomponentes
-
 function Logo({ textColor }: { textColor: string }) {
     return (
         <a href="#" className={`transition-colors duration-300 ${textColor}`}>
-            <span className="text-lg font-normal lg:text-xl">Eduardo </span>
-            <span className="text-lg font-semibold italic lg:text-xl">Montenegro</span>
+            <span className="text-lg lg:text-xl font-semibold">Eduardo Montenegro</span>
         </a>
     )
 }
@@ -253,8 +250,8 @@ function LanguageSelector({
                                 key={lang.code}
                                 onClick={() => onLanguageChange(lang.code)}
                                 className={`block w-full px-4 py-2 text-left text-sm transition-colors ${isInContact
-                                        ? `hover:bg-white/10 ${language === lang.code ? "font-semibold text-white" : "text-neutral-300"}`
-                                        : `hover:bg-neutral-100 ${language === lang.code ? "font-semibold text-neutral-900" : "text-neutral-600"}`
+                                    ? `hover:bg-white/10 ${language === lang.code ? "font-semibold text-white" : "text-neutral-300"}`
+                                    : `hover:bg-neutral-100 ${language === lang.code ? "font-semibold text-neutral-900" : "text-neutral-600"}`
                                     }`}
                             >
                                 {lang.label}
@@ -424,8 +421,8 @@ function MobileMenu({
                                             key={lang.code}
                                             onClick={() => onLanguageChange(lang.code)}
                                             className={`text-sm transition-colors ${language === lang.code
-                                                    ? "font-semibold text-white underline underline-offset-4"
-                                                    : "text-neutral-500 hover:text-white"
+                                                ? "font-semibold text-white underline underline-offset-4"
+                                                : "text-neutral-500 hover:text-white"
                                                 }`}
                                         >
                                             {lang.label}
