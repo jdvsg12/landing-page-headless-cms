@@ -10,14 +10,23 @@ export function HeroBanner() {
     const t = getTranslation(language)
 
     return (
-        <section className="sticky top-0 z-0 h-screen overflow-hidden bg-[#8F958B]">
+        <section className="sticky top-0 z-0 h-screen overflow-hidden bg-[#8F958B] relative">
+            {/* Mobile background image with filter */}
+            <div className="absolute inset-0 lg:hidden">
+                <div
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                    style={{ backgroundImage: "url('/images/profile.png')" }}
+                />
+                <div className="absolute inset-0 bg-black/40" />
+            </div>
+
             <div className="relative z-10 flex h-full flex-col">
                 <div className="flex flex-1 flex-col items-center justify-center px-6 lg:flex-row lg:items-center lg:justify-center lg:gap-16 lg:px-8">
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="relative mb-8 lg:mb-0"
+                        className="relative mb-8 lg:mb-0 hidden lg:block"
                     >
                         <div className="relative hidden overflow-hidden lg:inline-block lg:h-dvh lg:w-10/12">
                             <img
@@ -32,7 +41,7 @@ export function HeroBanner() {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
-                        className="text-center lg:text-left"
+                        className="text-center lg:text-left z-20"
                     >
                         <h1 className="mb-3 text-[32px] font-medium tracking-wide text-white underline underline-offset-8 md:text-[40px]">
                             {t.hero.title}

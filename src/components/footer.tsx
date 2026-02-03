@@ -29,21 +29,27 @@ export function Footer() {
                     <span className="text-sm text-white">{t.footer.socialMedia}</span>
                     <div className="flex gap-6">
                         <motion.a
-                            href="#"
+                            href="https://www.linkedin.com/in/montenegroedu/"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             whileHover={{ y: -2 }}
                             className="text-sm text-neutral-400 transition-colors hover:text-white"
                         >
                             LinkedIn
                         </motion.a>
                         <motion.a
-                            href="#"
+                            href="https://www.instagram.com/eduardomontenegroff"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             whileHover={{ y: -2 }}
                             className="text-sm text-neutral-400 transition-colors hover:text-white"
                         >
                             Instagram
                         </motion.a>
                         <motion.a
-                            href="#"
+                            href="https://www.youtube.com/@psicologiaycultura"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             whileHover={{ y: -2 }}
                             className="text-sm text-neutral-400 transition-colors hover:text-white"
                         >
