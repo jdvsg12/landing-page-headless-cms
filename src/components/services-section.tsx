@@ -6,6 +6,24 @@ import { ServiceCard } from "@/components/ui/service-card"
 import { useLanguage } from "@/lib/language-context"
 import { getTranslation } from "@/lib/translations"
 
+interface ServiceItem {
+    title: string
+    description: string
+    contact?: {
+        whatsapp?: string
+        email?: string
+    }
+}
+
+interface ServicesTranslations {
+    title: string
+    items: ServiceItem[]
+}
+
+interface Translations {
+    services: ServicesTranslations
+}
+
 export function ServicesSection() {
     const sectionRef = useRef<HTMLDivElement>(null)
     const { scrollYProgress } = useScroll({
@@ -14,7 +32,7 @@ export function ServicesSection() {
     })
 
     const { language } = useLanguage()
-    const t = getTranslation(language)
+    const t = getTranslation(language) as Translations
 
     const contentY = useTransform(scrollYProgress, [0, 0.5, 1], ["15%", "0%", "-15%"])
 
@@ -39,7 +57,13 @@ export function ServicesSection() {
 
                     <div className="grid gap-8 md:grid-cols-3">
                         {t.services.items.map((service, index) => (
-                            <ServiceCard key={index} title={service.title} description={service.description} index={index} />
+                            <ServiceCard
+                                key={index}
+                                title={service.title}
+                                description={service.description}
+                                index={index}
+                                contact={service.contact}
+                            />
                         ))}
                     </div>
                 </motion.div>

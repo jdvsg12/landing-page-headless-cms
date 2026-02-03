@@ -5,6 +5,7 @@ export const translations = {
         nav: {
             about: "Acerca de mí",
             services: "Servicios",
+            faq: "FAQ",
             contact: "Contacto",
         },
         hero: {
@@ -27,22 +28,36 @@ export const translations = {
         },
         services: {
             title: "Servicios",
+            seeMore: "Ver más",
+            seeLess: "Ver menos",
+            contactWhatsApp: "Contactar por WhatsApp",
+            contactEmail: "Contactar por email",
             items: [
                 {
                     title: "Psicoanálisis con adultos",
                     description:
-                        "Tomar un camino distinto al que te ha llevado a la situación actual es posible. Desde el Psicoanálisis, se ofrece un espacio de escucha donde puedas hablar, acompañándote en el proceso de atravesar y transformar aquello que te causa sufrimiento.",
+                        "El psicoanálisis con adultos es un dispositivo clínico orientado al trabajo con el sufrimiento subjetivo, la angustia y los conflictos que se expresan de distintas maneras en la vida del sujeto.\n\nSe trata de un espacio de palabra y de escucha, en el que cada proceso se construye de manera singular y a su propio tiempo, a partir de lo que el sujeto trae como malestar, sufrimiento o interrogante.\n\nLas sesiones pueden realizarse de manera presencial u online, según el encuadre acordado.",
+                    contact: {
+                        whatsapp: "+573142793431",
+                        email: "psicoanalisis@eduardomontenegro.com"
+                    }
                 },
                 {
-                    title: "Supervisión clínica - profesionales",
+                    title: "Supervisión clínica",
                     description:
-                        "Tomar un camino distinto al que te ha llevado a la situación actual es posible. Desde el Psicoanálisis, se ofrece un espacio de escucha donde puedas hablar, acompañándote en el proceso de atravesar y transformar aquello que te causa sufrimiento.",
+                        "La supervisión clínica es un espacio de trabajo dirigido a psicólogos/as y psicoanalistas que se encuentran ejerciendo la práctica clínica y desean interrogar su quehacer, sus impasses y sus decisiones.\n\nConsiste en un dispositivo de lectura clínica que permite situar la posición del analista, el lugar de la transferencia y los efectos de la intervención.\n\nLa supervisión se orienta por el caso, por lo singular de cada encuentro clínico y por las preguntas que allí emergen. Modalidad online o presencial, según encuadre.",
+                    contact: {
+                        email: "formacion@eduardomontenegro.com"
+                    }
                 },
                 {
-                    title: "Supervisión clínica - profesionales",
+                    title: "Grupo de estudio",
                     description:
-                        "Tomar un camino distinto al que te ha llevado a la situación actual es posible. Desde el Psicoanálisis, se ofrece un espacio de escucha donde puedas hablar, acompañándote en el proceso de atravesar y transformar aquello que te causa sufrimiento.",
-                },
+                        "El grupo de estudio propone un espacio de lectura y discusión clínica en torno al primer encuentro del sujeto con el analista, desde una orientación lacaniana.\n\nSe trabajarán los modos de llegada a la consulta, la formulación de la demanda, la instalación del dispositivo analítico y los primeros efectos de la transferencia.\n\nEl trabajo se realizará a partir de los textos de Sigmund Freud, los seminarios de Jacques Lacan, y de la discusión clínica. Está dirigido a estudiantes avanzados y profesionales interesados en interrogar la clínica en su punto de inicio. Modalidad online, frecuencia quincenal, miércoles de 9 a 11 a.m. (hora Colombia).",
+                    contact: {
+                        email: "formacion@eduardomontenegro.com"
+                    }
+                }
             ],
         },
         contact: {
@@ -61,6 +76,78 @@ export const translations = {
             contactTitle: "Contact",
             socialMedia: "Social Media",
         },
+        faq: {
+            title: "Preguntas frecuentes",
+            categories: [
+                {
+                    name: "Sobre psicoanálisis",
+                    items: [
+                        {
+                            question: "¿Qué se entiende por psicoanálisis?",
+                            answer: "El psicoanálisis es una práctica clínica orientada por la enseñanza de Freud y Lacan, centrada en la palabra y en la singularidad del sujeto. Se ocupa del sufrimiento, la angustia y los conflictos que se juegan en la experiencia subjetiva del sujeto.",
+                        },
+                        {
+                            question: "¿Cuándo consultar a un psicoanalista?",
+                            answer: "Cuando algo del malestar, la angustia o la repetición insiste y no encuentra una vía de elaboración. La consulta no requiere un diagnóstico previo ni una demanda clara, sino la posibilidad de interrogar aquello que irrumpe en la experiencia del sujeto.",
+                        },
+                        {
+                            question: "¿Tiene tiempo definido un análisis?",
+                            answer: "No. Un análisis no responde a una duración estándar ni a un número fijo de sesiones. Su tiempo se construye en función del proceso del sujeto, de lo que se pone en juego en la transferencia y de los efectos que allí se producen.",
+                        },
+                        {
+                            question: "¿En qué se diferencia el psicoanálisis de otras prácticas en salud mental?",
+                            answer: "El psicoanálisis se orienta por la singularidad del sujeto y por la lectura de lo que se juega en la palabra y en la transferencia. La dirección del tratamiento se construye caso por caso, a partir de lo que emerge en la experiencia clínica y del modo en que cada sujeto se implica en su decir.",
+                        },
+                        {
+                            question: "¿Cómo se establecen los honorarios?",
+                            answer: "Los honorarios se establecen en el primer contacto, a partir de un encuadre inicial. Como referencia, el valor por sesión se encuentra entre COP 150.000 y COP 230.000. Para el exterior, entre USD 50 y USD 70 o EUR 45 y EUR 65. El valor concreto se acuerda caso por caso.",
+                        },
+                    ],
+                },
+                {
+                    name: "Sobre supervisión",
+                    items: [
+                        {
+                            question: "¿En qué momentos es pertinente supervisar un caso?",
+                            answer: "La supervisión resulta pertinente cuando el analista se encuentra con impasses, dudas, efectos inesperados de la intervención o interrogantes clínicos. No responde únicamente a dificultades técnicas, sino a la lectura de la posición del analista en el caso.",
+                        },
+                        {
+                            question: "¿La supervisión tiene una frecuencia establecida?",
+                            answer: "La frecuencia de la supervisión no es fija. Se establece según el encuadre acordado, las características del caso y del profesional. Puede ser regular o puntual, dependiendo del momento clínico y de la demanda de supervisión.",
+                        },
+                        {
+                            question: "¿Qué material se trabaja en una supervisión clínica?",
+                            answer: "Se trabaja a partir de lo que llama la atención al analista del caso: sus intervenciones, su angustia, los impasses, las preguntas clínicas y los efectos de la transferencia.",
+                        },
+                        {
+                            question: "¿Cuáles son los honorarios de la supervisión clínica?",
+                            answer: "Los honorarios de supervisión clínica son COP 100.000 por encuentro. Para el exterior, USD 30 o EUR 25. La modalidad puede ser online o presencial, según el encuadre acordado.",
+                        },
+                    ],
+                },
+                {
+                    name: "Sobre grupo de estudio",
+                    items: [
+                        {
+                            question: "¿En qué consiste un grupo de estudio en psicoanálisis?",
+                            answer: "Es un espacio de lectura, discusión y trabajo conceptual orientado por el psicoanálisis, desde una perspectiva clínica. El grupo se centra en textos y problemas específicos, privilegiando la elaboración colectiva y el intercambio riguroso entre los participantes.",
+                        },
+                        {
+                            question: "¿Cuál es la duración del grupo de estudio?",
+                            answer: "El grupo de estudio tiene una duración definida de veinte encuentros, con una frecuencia quincenal. Cada encuentro tiene una duración de dos horas. El recorrido se organiza en un tiempo delimitado, orientado al trabajo riguroso sobre el tema propuesto.",
+                        },
+                        {
+                            question: "¿Cuántos integrantes puede tener un grupo de estudio?",
+                            answer: "El grupo de estudio tiene un cupo reducido. Está conformado por un máximo de seis participantes, más el coordinador, con el fin de sostener un espacio de trabajo riguroso, clínico y de intercambio efectivo.",
+                        },
+                        {
+                            question: "¿Cuáles son los honorarios del grupo de estudio?",
+                            answer: "Los honorarios del grupo de estudio son COP 100.000 por encuentro. Para el exterior, USD 30 o EUR 25. La modalidad es online.",
+                        },
+                    ],
+                },
+            ],
+        },
         footer: {
             socialMedia: "Social Media",
         },
@@ -69,6 +156,7 @@ export const translations = {
         nav: {
             about: "About",
             services: "Services",
+            faq: "FAQ",
             contact: "Contact",
         },
         hero: {
@@ -125,6 +213,78 @@ export const translations = {
             contactTitle: "Contact",
             socialMedia: "Social Media",
         },
+        faq: {
+            title: "Frequently asked questions",
+            categories: [
+                {
+                    name: "About psychoanalysis",
+                    items: [
+                        {
+                            question: "What is psychoanalysis?",
+                            answer: "Psychoanalysis is a clinical practice guided by the teachings of Freud and Lacan, centered on the word and the singularity of the subject. It deals with suffering, anxiety and conflicts that play out in the subjective experience.",
+                        },
+                        {
+                            question: "When to consult a psychoanalyst?",
+                            answer: "When something of the discomfort, anxiety or repetition persists and does not find a way of elaboration. The consultation does not require a prior diagnosis or a clear demand, but the possibility of questioning what erupts in the subject's experience.",
+                        },
+                        {
+                            question: "Does an analysis have a defined time?",
+                            answer: "No. An analysis does not respond to a standard duration or a fixed number of sessions. Its time is built according to the subject's process, what is at stake in the transference and the effects that are produced there.",
+                        },
+                        {
+                            question: "How does psychoanalysis differ from other mental health practices?",
+                            answer: "Psychoanalysis is guided by the singularity of the subject and by the reading of what is at play in the word and in the transference. The direction of treatment is built case by case, based on what emerges in clinical experience.",
+                        },
+                        {
+                            question: "How are fees established?",
+                            answer: "Fees are established at the first contact, based on an initial framework. As a reference, the value per session is between COP 150,000 and COP 230,000. For abroad, between USD 50 and USD 70 or EUR 45 and EUR 65. The specific value is agreed case by case.",
+                        },
+                    ],
+                },
+                {
+                    name: "About supervision",
+                    items: [
+                        {
+                            question: "When is it appropriate to supervise a case?",
+                            answer: "Supervision is relevant when the analyst encounters impasses, doubts, unexpected effects of intervention or clinical questions. It does not respond only to technical difficulties, but to the reading of the analyst's position in the case.",
+                        },
+                        {
+                            question: "Does supervision have an established frequency?",
+                            answer: "The frequency of supervision is not fixed. It is established according to the agreed framework, the characteristics of the case and the professional. It can be regular or punctual, depending on the clinical moment and the demand for supervision.",
+                        },
+                        {
+                            question: "What material is worked on in clinical supervision?",
+                            answer: "Work is done based on what catches the analyst's attention about the case: their interventions, their anxiety, the impasses, the clinical questions and the effects of the transference.",
+                        },
+                        {
+                            question: "What are the fees for clinical supervision?",
+                            answer: "Clinical supervision fees are COP 100,000 per meeting. For abroad, USD 30 or EUR 25. The modality can be online or in-person, according to the agreed framework.",
+                        },
+                    ],
+                },
+                {
+                    name: "About study group",
+                    items: [
+                        {
+                            question: "What does a psychoanalysis study group consist of?",
+                            answer: "It is a space for reading, discussion and conceptual work guided by psychoanalysis, from a clinical perspective. The group focuses on specific texts and problems, privileging collective elaboration and rigorous exchange among participants.",
+                        },
+                        {
+                            question: "What is the duration of the study group?",
+                            answer: "The study group has a defined duration of twenty meetings, with a biweekly frequency. Each meeting lasts two hours. The journey is organized in a delimited time, oriented to rigorous work on the proposed topic.",
+                        },
+                        {
+                            question: "How many members can a study group have?",
+                            answer: "The study group has a limited capacity. It is made up of a maximum of six participants, plus the coordinator, in order to sustain a rigorous, clinical and effective exchange space.",
+                        },
+                        {
+                            question: "What are the fees for the study group?",
+                            answer: "Study group fees are COP 100,000 per meeting. For abroad, USD 30 or EUR 25. The modality is online.",
+                        },
+                    ],
+                },
+            ],
+        },
         footer: {
             socialMedia: "Social Media",
         },
@@ -133,6 +293,7 @@ export const translations = {
         nav: {
             about: "À propos",
             services: "Services",
+            faq: "FAQ",
             contact: "Contact",
         },
         hero: {
@@ -188,6 +349,78 @@ export const translations = {
             send: "Envoyer",
             contactTitle: "Contact",
             socialMedia: "Réseaux Sociaux",
+        },
+        faq: {
+            title: "Questions fréquentes",
+            categories: [
+                {
+                    name: "Sur la psychanalyse",
+                    items: [
+                        {
+                            question: "Qu'est-ce que la psychanalyse?",
+                            answer: "La psychanalyse est une pratique clinique guidée par les enseignements de Freud et Lacan, centrée sur la parole et la singularité du sujet. Elle traite de la souffrance, de l'angoisse et des conflits qui se jouent dans l'expérience subjective.",
+                        },
+                        {
+                            question: "Quand consulter un psychanalyste?",
+                            answer: "Quand quelque chose du malaise, de l'angoisse ou de la répétition persiste et ne trouve pas de voie d'élaboration. La consultation ne nécessite pas de diagnostic préalable ni de demande claire, mais la possibilité d'interroger ce qui surgit dans l'expérience du sujet.",
+                        },
+                        {
+                            question: "Une analyse a-t-elle une durée définie?",
+                            answer: "Non. Une analyse ne répond pas à une durée standard ni à un nombre fixe de séances. Son temps se construit en fonction du processus du sujet, de ce qui se joue dans le transfert et des effets qui s'y produisent.",
+                        },
+                        {
+                            question: "En quoi la psychanalyse diffère-t-elle des autres pratiques de santé mentale?",
+                            answer: "La psychanalyse est guidée par la singularité du sujet et par la lecture de ce qui se joue dans la parole et dans le transfert. La direction du traitement se construit au cas par cas, à partir de ce qui émerge dans l'expérience clinique.",
+                        },
+                        {
+                            question: "Comment les honoraires sont-ils établis?",
+                            answer: "Les honoraires sont établis lors du premier contact, sur la base d'un cadre initial. À titre de référence, la valeur par séance se situe entre 150 000 et 230 000 COP. Pour l'étranger, entre 50 et 70 USD ou 45 et 65 EUR. La valeur concrète est convenue au cas par cas.",
+                        },
+                    ],
+                },
+                {
+                    name: "Sur la supervision",
+                    items: [
+                        {
+                            question: "Quand est-il pertinent de superviser un cas?",
+                            answer: "La supervision est pertinente lorsque l'analyste rencontre des impasses, des doutes, des effets inattendus de l'intervention ou des questions cliniques. Elle ne répond pas seulement à des difficultés techniques, mais à la lecture de la position de l'analyste dans le cas.",
+                        },
+                        {
+                            question: "La supervision a-t-elle une fréquence établie?",
+                            answer: "La fréquence de la supervision n'est pas fixe. Elle s'établit selon le cadre convenu, les caractéristiques du cas et du professionnel. Elle peut être régulière ou ponctuelle, selon le moment clinique et la demande de supervision.",
+                        },
+                        {
+                            question: "Quel matériel travaille-t-on en supervision clinique?",
+                            answer: "On travaille à partir de ce qui attire l'attention de l'analyste sur le cas: ses interventions, son angoisse, les impasses, les questions cliniques et les effets du transfert.",
+                        },
+                        {
+                            question: "Quels sont les honoraires de la supervision clinique?",
+                            answer: "Les honoraires de supervision clinique sont de 100 000 COP par rencontre. Pour l'étranger, 30 USD ou 25 EUR. La modalité peut être en ligne ou en personne, selon le cadre convenu.",
+                        },
+                    ],
+                },
+                {
+                    name: "Sur le groupe d'étude",
+                    items: [
+                        {
+                            question: "En quoi consiste un groupe d'étude en psychanalyse?",
+                            answer: "C'est un espace de lecture, de discussion et de travail conceptuel guidé par la psychanalyse, d'une perspective clinique. Le groupe se concentre sur des textes et des problèmes spécifiques, privilégiant l'élaboration collective et l'échange rigoureux entre les participants.",
+                        },
+                        {
+                            question: "Quelle est la durée du groupe d'étude?",
+                            answer: "Le groupe d'étude a une durée définie de vingt rencontres, avec une fréquence bimensuelle. Chaque rencontre dure deux heures. Le parcours s'organise dans un temps délimité, orienté vers un travail rigoureux sur le thème proposé.",
+                        },
+                        {
+                            question: "Combien de membres peut avoir un groupe d'étude?",
+                            answer: "Le groupe d'étude a une capacité limitée. Il est composé d'un maximum de six participants, plus le coordinateur, afin de maintenir un espace de travail rigoureux, clinique et d'échange effectif.",
+                        },
+                        {
+                            question: "Quels sont les honoraires du groupe d'étude?",
+                            answer: "Les honoraires du groupe d'étude sont de 100 000 COP par rencontre. Pour l'étranger, 30 USD ou 25 EUR. La modalité est en ligne.",
+                        },
+                    ],
+                },
+            ],
         },
         footer: {
             socialMedia: "Réseaux Sociaux",

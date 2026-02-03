@@ -178,21 +178,21 @@ export function ContactSection() {
                                 <h3 className="mb-6 text-2xl font-semibold text-white">{t.contact.socialMedia}</h3>
                                 <div className="space-y-2">
                                     <motion.a
-                                        href="#"
+                                        href="https://www.instagram.com/eduardomontenegroff"
                                         whileHover={{ x: 4, color: "#ffffff" }}
                                         className="block text-neutral-400 transition-colors"
                                     >
                                         Instagram
                                     </motion.a>
                                     <motion.a
-                                        href="#"
+                                        href="https://www.linkedin.com/in/montenegroedu/"
                                         whileHover={{ x: 4, color: "#ffffff" }}
                                         className="block text-neutral-400 transition-colors"
                                     >
                                         LinkedIn
                                     </motion.a>
                                     <motion.a
-                                        href="#"
+                                        href="https://www.youtube.com/@psicologiaycultura"
                                         whileHover={{ x: 4, color: "#ffffff" }}
                                         className="block text-neutral-400 transition-colors"
                                     >

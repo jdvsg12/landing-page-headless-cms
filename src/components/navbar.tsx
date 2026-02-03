@@ -30,6 +30,7 @@ export function Navbar() {
     const navLinks = [
         { name: t.nav.about, href: "#about" },
         { name: t.nav.services, href: "#services" },
+        { name: t.nav.faq, href: "#faq" },
         { name: t.nav.contact, href: "#contact" },
     ]
 
@@ -379,7 +380,7 @@ function MobileMenu({
                             </ul>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-8">
+                        <div className="flex flex-col gap-8">
                             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
                                 <h4 className="mb-4 text-sm font-medium uppercase tracking-wider text-neutral-500">{t.nav.contact}</h4>
                                 <a href="mailto:formacion@psicologiaycultura.com" className="mb-2 block text-sm text-white hover:text-neutral-400">

@@ -8,6 +8,7 @@ import { MessageSection } from "@/components/message-section"
 import { ServicesSection } from "@/components/services-section"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
+import { FaqSection } from "@/components/faq-section"
 
 export default function HomePage() {
   return (
@@ -18,6 +19,7 @@ export default function HomePage() {
         <AboutSection />
         <MessageSection />
         <ServicesSection />
+        <FaqSection />
         <ContactSection />
         <div className="relative z-40">
           <Footer />
