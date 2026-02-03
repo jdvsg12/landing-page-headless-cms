@@ -1,17 +1,11 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useLayoutEffect, useRef, useState } from "react"
 import { motion } from "motion/react"
 
 interface ContactInfo {
     whatsapp?: string
     email?: string
-}
-
-interface ServiceItem {
-    title: string
-    description: string
-    contact?: ContactInfo
 }
 
 interface ServiceCardProps {
@@ -26,20 +20,25 @@ export function ServiceCard({ title, description, index, contact }: ServiceCardP
     const [canExpand, setCanExpand] = useState(false)
     const descriptionRef = useRef<HTMLParagraphElement | null>(null)
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         const el = descriptionRef.current
         if (!el) return
 
         const compute = () => {
             if (!descriptionRef.current) return
             const node = descriptionRef.current
-            setCanExpand(node.scrollHeight > node.clientHeight)
+            // Force a reflow to get accurate measurements
+            const originalClamp = (node.style as any).webkitLineClamp
+                ; (node.style as any).webkitLineClamp = '6'
+            const isClamped = node.scrollHeight > node.clientHeight
+                ; (node.style as any).webkitLineClamp = originalClamp
+            setCanExpand(isClamped)
         }
 
         compute()
         window.addEventListener("resize", compute)
         return () => window.removeEventListener("resize", compute)
-    }, [description, isExpanded])
+    }, [description])
 
     const handleWhatsAppClick = (phone: string) => {
         const message = encodeURIComponent("Hola, estoy interesado/a en sus servicios")
@@ -68,9 +67,9 @@ export function ServiceCard({ title, description, index, contact }: ServiceCardP
                 <h3 className="mb-4 text-xl font-semibold text-neutral-900">{title}</h3>
 
                 <div className="relative">
-                    <p
+                    <motion.p
                         ref={descriptionRef}
-                        className={`whitespace-pre-line text-sm leading-relaxed text-neutral-600 transition-all duration-300 ${isExpanded ? 'line-clamp-none' : 'line-clamp-6'
+                        className={`whitespace-pre-line text-sm leading-relaxed text-neutral-600 transition-all duration-500 ease-in-out ${isExpanded ? 'line-clamp-none' : 'line-clamp-6'
                             }`}
                         style={{
                             display: '-webkit-box',
@@ -78,17 +77,59 @@ export function ServiceCard({ title, description, index, contact }: ServiceCardP
                             WebkitBoxOrient: 'vertical',
                             overflow: 'hidden'
                         }}
+                        animate={{
+                            height: isExpanded ? 'auto' : 'auto'
+                        }}
+                        transition={{
+                            duration: 0.5,
+                            ease: [0.4, 0, 0.2, 1]
+                        }}
                     >
                         {description}
-                    </p>
+                    </motion.p>
 
                     {canExpand && (
-                        <button
+                        <motion.button
                             onClick={() => setIsExpanded(!isExpanded)}
                             className="mt-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            animate={{
+                                opacity: 1,
+                                y: 0
+                            }}
+                            initial={{ opacity: 0, y: 10 }}
+                            transition={{
+                                duration: 0.3,
+                                delay: isExpanded ? 0 : 0.1
+                            }}
                         >
-                            {isExpanded ? 'Ver menos' : 'Ver más'}
-                        </button>
+                            <motion.span
+                                animate={{
+                                    display: 'inline-block'
+                                }}
+                                transition={{
+                                    duration: 0.2
+                                }}
+                            >
+                                {isExpanded ? 'Ver menos' : 'Ver más'}
+                            </motion.span>
+                            <motion.svg
+                                className="inline-block ml-1 w-3 h-3"
+                                animate={{
+                                    rotate: isExpanded ? 180 : 0
+                                }}
+                                transition={{
+                                    duration: 0.3,
+                                    ease: "easeInOut"
+                                }}
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            </motion.svg>
+                        </motion.button>
                     )}
                 </div>
 
