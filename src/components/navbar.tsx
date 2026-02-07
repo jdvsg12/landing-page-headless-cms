@@ -15,6 +15,7 @@ const languages: { code: Language; label: string }[] = [
 const SCROLL_THRESHOLD = 50
 const HERO_OFFSET = 100
 const CONTACT_OFFSET = 100
+const SERVICES_OFFSET = 100
 
 export function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false)
@@ -22,6 +23,7 @@ export function Navbar() {
     const [isLangMenuOpen, setIsLangMenuOpen] = useState(false)
     const [isInHero, setIsInHero] = useState(true)
     const [isInContact, setIsInContact] = useState(false)
+    const [isInServices, setIsInServices] = useState(false)
     const { language, setLanguage } = useLanguage()
     const t = getTranslation(language)
     const menuButtonRef = useRef<HTMLButtonElement>(null)
@@ -57,6 +59,16 @@ export function Navbar() {
 
             setIsScrolled(scrollY > SCROLL_THRESHOLD)
             setIsInHero(scrollY < heroHeight - HERO_OFFSET)
+
+            // Detect services section using scroll position
+            const servicesSection = document.getElementById("services")
+            if (servicesSection) {
+                const servicesTop = servicesSection.offsetTop
+                const servicesBottom = servicesTop + servicesSection.offsetHeight
+                const isInServicesRange = scrollY >= servicesTop - 200 && scrollY < servicesBottom - 200
+                setIsInServices(isInServicesRange)
+                console.log("Services detection by scroll:", { scrollY, servicesTop, servicesBottom, isInServicesRange })
+            }
 
             const contactSection = document.getElementById("contact")
             if (contactSection) {
@@ -94,14 +106,20 @@ export function Navbar() {
         setIsLangMenuOpen(false)
     }
 
-    const isDarkSection = isInHero || isInContact
+    const isDarkSection = (isInHero || isInContact) && !isInServices
     const textColorClass = isDarkSection ? "text-white" : "text-foreground"
+
+    console.log("Navbar state:", { isInHero, isInServices, isInContact, isDarkSection, textColorClass })
 
     const navbarBgClass = isInContact
         ? "bg-[#1a1a1a]"
-        : isScrolled && !isInHero
-            ? "bg-white/60 backdrop-blur-2xl"
-            : "bg-transparent"
+        : isInServices
+            ? "bg-[#D9D9D9]"
+            : isScrolled && !isInHero
+                ? "bg-white/60 backdrop-blur-2xl"
+                : "bg-transparent"
+
+    console.log("Navbar classes applied:", { navbarBgClass, isInServices, isInContact, isInHero })
 
     const menuButtonBgClass = isMobileMenuOpen
         ? "bg-white"
@@ -346,21 +364,20 @@ function MobileMenu({
                         </svg>
                     </button>
 
-                    <div className="flex h-full flex-col justify-between px-8 pb-12 pt-24">
+                    <div className="flex h-dvh flex-col justify-between px-8 py-16">
                         <div>
                             <motion.a
                                 href="#"
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.2 }}
-                                className="mb-12 block text-white"
+                                className="mb-8 block text-white"
                                 onClick={onClose}
                             >
-                                <span className="text-xl font-normal">Eduardo </span>
-                                <span className="text-xl font-semibold italic">Montenegro</span>
+                                <span className="text-xl font-normal">Eduardo Montenegro</span>
                             </motion.a>
 
-                            <ul className="flex flex-col gap-6">
+                            <ul className="flex flex-col gap-6 mb-8">
                                 {navLinks.map((link, index) => (
                                     <motion.li
                                         key={link.name}
@@ -383,54 +400,55 @@ function MobileMenu({
                         <div className="flex flex-col gap-8">
                             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
                                 <h4 className="mb-4 text-sm font-medium uppercase tracking-wider text-neutral-500">{t.nav.contact}</h4>
-                                <a href="mailto:formacion@psicologiaycultura.com" className="mb-2 block text-sm text-white hover:text-neutral-400">
-                                    formacion@psicologiaycultura.com
+                                <a href="mailto:formacion@eduardomontenegro.com" className="mb-2 block text-sm text-white hover:text-neutral-400">
+                                    formacion@eduardomontenegro.com
                                 </a>
                                 <a href="tel:+573142793431" className="block text-sm text-white hover:text-neutral-400">
                                     +57 314 279 3431
                                 </a>
                             </motion.div>
+                            <div className="flex flex-row justify-between">
+                                <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}>
+                                    <h4 className="mb-4 text-sm font-medium uppercase tracking-wider text-neutral-500">Social Media</h4>
+                                    <ul className="flex flex-col gap-2">
+                                        {socialLinks.map((link) => (
+                                            <li key={link.name}>
+                                                <a
+                                                    href={link.href}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-sm text-white transition-colors hover:text-neutral-400"
+                                                >
+                                                    {link.name}
+                                                </a>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </motion.div>
 
-                            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}>
-                                <h4 className="mb-4 text-sm font-medium uppercase tracking-wider text-neutral-500">Social Media</h4>
-                                <ul className="flex flex-col gap-2">
-                                    {socialLinks.map((link) => (
-                                        <li key={link.name}>
-                                            <a
-                                                href={link.href}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="text-sm text-white transition-colors hover:text-neutral-400"
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.7 }}
+                                    className="col-span-2"
+                                >
+                                    <h4 className="mb-4 text-sm font-medium uppercase tracking-wider text-neutral-500">Language</h4>
+                                    <div className="flex flex-col gap-4">
+                                        {languages.map((lang) => (
+                                            <button
+                                                key={lang.code}
+                                                onClick={() => onLanguageChange(lang.code)}
+                                                className={`text-sm transition-colors text-left ${language === lang.code
+                                                    ? "font-semibold text-white underline underline-offset-4"
+                                                    : "text-neutral-500 hover:text-white"
+                                                    }`}
                                             >
-                                                {link.name}
-                                            </a>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </motion.div>
-
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.7 }}
-                                className="col-span-2"
-                            >
-                                <h4 className="mb-4 text-sm font-medium uppercase tracking-wider text-neutral-500">Language</h4>
-                                <div className="flex gap-4">
-                                    {languages.map((lang) => (
-                                        <button
-                                            key={lang.code}
-                                            onClick={() => onLanguageChange(lang.code)}
-                                            className={`text-sm transition-colors ${language === lang.code
-                                                ? "font-semibold text-white underline underline-offset-4"
-                                                : "text-neutral-500 hover:text-white"
-                                                }`}
-                                        >
-                                            {lang.label}
-                                        </button>
-                                    ))}
-                                </div>
-                            </motion.div>
+                                                {lang.label}
+                                            </button>
+                                        ))}
+                                    </div>
+                                </motion.div>
+                            </div>
                         </div>
                     </div>
                 </motion.div>

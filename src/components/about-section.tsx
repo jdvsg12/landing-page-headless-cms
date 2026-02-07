@@ -47,11 +47,8 @@ export function AboutSection() {
                         className="order-1 lg:order-2"
                     >
                         <h2 className="text-right font-serif">
-                            <span className="text-5xl font-light italic text-muted-foreground/50 lg:text-7xl">
-                                {t.about.title1}
-                            </span>{" "}
                             <span className="text-6xl font-bold text-muted-foreground/50 lg:text-8xl">
-                                {t.about.title2}
+                                {t.about.title}
                             </span>
                         </h2>
                     </motion.div>

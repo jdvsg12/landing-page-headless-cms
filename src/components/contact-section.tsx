@@ -171,7 +171,7 @@ export function ContactSection() {
                             >
                                 <h3 className="mb-6 text-2xl font-semibold text-white">{t.contact.contactTitle}</h3>
                                 <div className="mb-8 space-y-2">
-                                    <p className="text-neutral-400">formacion@psicologiaycultura.com</p>
+                                    <p className="text-neutral-400">formacion@eduardomontenegro.com</p>
                                     <p className="text-neutral-400">+57 3142793431</p>
                                 </div>
 

@@ -14,8 +14,6 @@ export const translations = {
         },
         about: {
             title: "Sobre mí",
-            title1: "Acerca",
-            title2: "de mí",
             description:
                 "Soy psicólogo y psicoanalista, con especialización y maestría en Psicopatología y Salud Mental. Desde hace once años trabajo en el campo clínico con adultos, acompañando a quienes atraviesan distintos modos de sufrimiento subjetivo.\n\nMi práctica se orienta al trabajo con aquello que irrumpe y no encuentra palabras: el malestar persistente, las pérdidas, los duelos, las marcas del abuso sexual y otras experiencias que dejan huella en la vida psíquica. Trabajo desde el psicoanálisis, entendiendo que cada sujeto es singular y que no hay soluciones universales para lo que se sufre.",
         },
@@ -168,14 +166,14 @@ export const translations = {
             title1: "About",
             title2: "me",
             description:
-                "I am a psychologist and psychoanalyst, with a specialization and master's degree in Psychopathology and Mental Health. For eleven years I have been working in the clinical field with adults, accompanying those who go through different forms of subjective suffering.\n\nMy practice focuses on working with what erupts and finds no words: persistent discomfort, losses, grief, the marks of sexual abuse and other experiences that leave a trace in psychic life. I work from psychoanalysis, understanding that each subject is unique and that there are no universal solutions to what one suffers.",
+                "I am a psychologist and psychoanalyst, with postgraduate training and a master's degree in Psychopathology and Mental Health. For over eleven years, I have worked in the clinical field with adults, accompanying those who experience different forms of subjective suffering.\n\nMy practice is oriented toward what irrupts and does not easily find words: persistent distress, loss, mourning, the marks left by sexual abuse, and other experiences that leave traces in psychic life. I work from a psychoanalytic perspective, understanding that each subject is singular and that there are no universal solutions to suffering.",
         },
         profile: {
             title: "Profile",
             title1: "My",
             title2: "Profile",
             description:
-                "I am currently a university professor and direct the area of social outreach at UNICOC (Colombia), spaces from which I continue to question the clinic, suffering and contemporary discourses on mental health.\n\nI have developed my clinical work both in person and online, serving people in different countries of America and Europe. In parallel, I have actively participated in academic and research spaces: I was secretary of the Research Department of IUSAM-APdeBA until 2021, I was part of the editorial board of the Argentine Journal of Humanities and Social Sciences, and I participated as a reviewer in publications related to research methodology in Argentina.\n\nI conceive the analytical space as a place of rigorous and respectful listening, where it is possible to speak without demands or promises of immediate well-being, and where each process is built in its own time.\n\nI listen to you.",
+                "I am currently a university professor and Director of Social Outreach at UNICOC (Colombia), spaces from which I continue to question clinical practice, suffering, and contemporary discourses on mental health.\n\nI have developed my clinical work both in person and online, working with people in different countries across the Americas and Europe. In parallel, I have actively participated in academic and research spaces: I served as Secretary of the Research Department at IUSAM–APdeBA until 2021, was a member of the editorial board of the Revista Argentina de Humanidades y Ciencias Sociales and participated as a reviewer in publications on research methodology in Argentina.\n\nI conceive the analytic space as a place of rigorous and respectful listening, where it is possible to speak without demands or promises of immediate well-being, and where each process unfolds in its own time.\n\nI listen.",
         },
         services: {
             title: "I can help you with ...",
@@ -214,72 +212,72 @@ export const translations = {
             socialMedia: "Social Media",
         },
         faq: {
-            title: "Frequently asked questions",
+            title: "Frequently Asked Questions",
             categories: [
                 {
-                    name: "About psychoanalysis",
+                    name: "About Psychoanalysis",
                     items: [
                         {
-                            question: "What is psychoanalysis?",
-                            answer: "Psychoanalysis is a clinical practice guided by the teachings of Freud and Lacan, centered on the word and the singularity of the subject. It deals with suffering, anxiety and conflicts that play out in the subjective experience.",
+                            question: "What is meant by psychoanalysis?",
+                            answer: "Psychoanalysis is a clinical practice oriented by the teaching of Freud and Lacan, centred on speech and on the singularity of the subject. It is concerned with suffering, anxiety, and conflicts as they unfold in the subject's subjective experience.",
                         },
                         {
-                            question: "When to consult a psychoanalyst?",
-                            answer: "When something of the discomfort, anxiety or repetition persists and does not find a way of elaboration. The consultation does not require a prior diagnosis or a clear demand, but the possibility of questioning what erupts in the subject's experience.",
+                            question: "When should one consult a psychoanalyst?",
+                            answer: "When something of discomfort, anxiety, or repetition persists and finds no path for elaboration. A consultation does not require a prior diagnosis or a clearly formulated demand, but rather the possibility of questioning what irrupts in the subject's experience.",
                         },
                         {
-                            question: "Does an analysis have a defined time?",
-                            answer: "No. An analysis does not respond to a standard duration or a fixed number of sessions. Its time is built according to the subject's process, what is at stake in the transference and the effects that are produced there.",
+                            question: "Does an analysis have a defined duration?",
+                            answer: "No. An analysis does not follow a standard duration or a fixed number of sessions. Its time is constructed according to the subject's process, what is at stake in transference, and the effects produced therein.",
                         },
                         {
                             question: "How does psychoanalysis differ from other mental health practices?",
-                            answer: "Psychoanalysis is guided by the singularity of the subject and by the reading of what is at play in the word and in the transference. The direction of treatment is built case by case, based on what emerges in clinical experience.",
+                            answer: "Psychoanalysis is oriented by the singularity of the subject and by a reading of what is at stake in speech and in transference. The direction of the treatment is constructed case by case, based on what emerges in the clinical experience and on how each subject becomes involved in their own saying.",
                         },
                         {
                             question: "How are fees established?",
-                            answer: "Fees are established at the first contact, based on an initial framework. As a reference, the value per session is between COP 150,000 and COP 230,000. For abroad, between USD 50 and USD 70 or EUR 45 and EUR 65. The specific value is agreed case by case.",
+                            answer: "Fees are established during the first contact, based on an initial clinical framework. As a reference, the fee per session ranges between COP 150,000 and COP 230,000. For clients outside Colombia, fees range between USD 50 and USD 70 or EUR 45 and EUR 65. The final fee is agreed upon on a case-by-case basis.",
                         },
                     ],
                 },
                 {
-                    name: "About supervision",
+                    name: "About Clinical Supervision",
                     items: [
                         {
                             question: "When is it appropriate to supervise a case?",
-                            answer: "Supervision is relevant when the analyst encounters impasses, doubts, unexpected effects of intervention or clinical questions. It does not respond only to technical difficulties, but to the reading of the analyst's position in the case.",
+                            answer: "Supervision is pertinent when the analyst encounters impasses, doubts, unexpected effects of an intervention, or clinical questions. It does not respond solely to technical difficulties, but to a reading of the analyst's position within the case.",
                         },
                         {
-                            question: "Does supervision have an established frequency?",
-                            answer: "The frequency of supervision is not fixed. It is established according to the agreed framework, the characteristics of the case and the professional. It can be regular or punctual, depending on the clinical moment and the demand for supervision.",
+                            question: "Does supervision have a fixed frequency?",
+                            answer: "The frequency of supervision is not fixed. It is established according to the agreed clinical framework, the characteristics of the case, and the professional's needs. It may be regular or punctual, depending on the clinical moment and the demand for supervision.",
                         },
                         {
                             question: "What material is worked on in clinical supervision?",
-                            answer: "Work is done based on what catches the analyst's attention about the case: their interventions, their anxiety, the impasses, the clinical questions and the effects of the transference.",
+                            answer: "The work is based on what draws the analyst's attention in the case: their interventions, their anxiety, impasses, clinical questions, and the effects of transference.",
                         },
                         {
                             question: "What are the fees for clinical supervision?",
-                            answer: "Clinical supervision fees are COP 100,000 per meeting. For abroad, USD 30 or EUR 25. The modality can be online or in-person, according to the agreed framework.",
+                            answer: "The fee for clinical supervision is COP 100,000 per meeting. For clients outside Colombia, the fee is USD 30 or EUR 25. The modality may be online or in person, according to the agreed framework.",
                         },
                     ],
                 },
                 {
-                    name: "About study group",
+                    name: "About the Study Group",
                     items: [
                         {
-                            question: "What does a psychoanalysis study group consist of?",
-                            answer: "It is a space for reading, discussion and conceptual work guided by psychoanalysis, from a clinical perspective. The group focuses on specific texts and problems, privileging collective elaboration and rigorous exchange among participants.",
+                            question: "What does a psychoanalytic study group consist of?",
+                            answer: "It is a space for reading, discussion, and conceptual work oriented by psychoanalysis from a clinical perspective. The group focuses on specific texts and problems, privileging collective elaboration and rigorous exchange among participants.",
                         },
                         {
                             question: "What is the duration of the study group?",
-                            answer: "The study group has a defined duration of twenty meetings, with a biweekly frequency. Each meeting lasts two hours. The journey is organized in a delimited time, oriented to rigorous work on the proposed topic.",
+                            answer: "The study group has a defined duration of twenty meetings, held on a biweekly basis. Each meeting lasts two hours. The work is organized within a delimited time frame, oriented toward rigorous engagement with the proposed topic.",
                         },
                         {
-                            question: "How many members can a study group have?",
-                            answer: "The study group has a limited capacity. It is made up of a maximum of six participants, plus the coordinator, in order to sustain a rigorous, clinical and effective exchange space.",
+                            question: "How many participants can a study group have?",
+                            answer: "The study group has a limited number of participants. It is composed of a maximum of six participants, plus the coordinator, to sustain a rigorous clinical working space and effective exchange.",
                         },
                         {
                             question: "What are the fees for the study group?",
-                            answer: "Study group fees are COP 100,000 per meeting. For abroad, USD 30 or EUR 25. The modality is online.",
+                            answer: "The fee for the study group is COP 100,000 per meeting. For participants outside Colombia, the fee is USD 30 or EUR 25. The modality is online.",
                         },
                     ],
                 },
@@ -305,33 +303,47 @@ export const translations = {
             title1: "À propos",
             title2: "de moi",
             description:
-                "Je suis psychologue et psychanalyste, avec une spécialisation et une maîtrise en Psychopathologie et Santé Mentale. Depuis onze ans, je travaille dans le domaine clinique avec des adultes, accompagnant ceux qui traversent différentes formes de souffrance subjective.\n\nMa pratique se concentre sur le travail avec ce qui surgit et ne trouve pas de mots : le malaise persistant, les pertes, les deuils, les marques de l'abus sexuel et d'autres expériences qui laissent une trace dans la vie psychique. Je travaille à partir de la psychanalyse, comprenant que chaque sujet est unique et qu'il n'y a pas de solutions universelles à ce que l'on souffre.",
+                "Je suis psychologue et psychanalyste, titulaire d'une spécialisation et d'un master en psychopathologie et santé mentale. Depuis plus de onze ans, je travaille dans le champ clinique avec des adultes, en accompagnant des personnes confrontées à différentes formes de souffrance subjective.\n\nMa pratique s'oriente vers ce qui fait irruption et ne trouve pas facilement de mots : le malaise persistant, les pertes, les deuils, les marques laissées par les abus sexuels et d'autres expériences qui laissent une trace dans la vie psychique. Je travaille à partir de la psychanalyse, en considérant que chaque sujet est singulier et qu'il n'existe pas de solutions universelles à la souffrance.",
         },
         profile: {
             title: "Profil",
             title1: "Mon",
             title2: "Profil",
             description:
-                "Je suis actuellement professeur universitaire et dirige le domaine de la projection sociale à l'UNICOC (Colombie), espaces à partir desquels je continue à interroger la clinique, la souffrance et les discours contemporains sur la santé mentale.\n\nJ'ai développé mon travail clinique tant en personne qu'en ligne, servant des personnes dans différents pays d'Amérique et d'Europe. En parallèle, j'ai participé activement aux espaces académiques et de recherche : j'ai été secrétaire du Département de Recherche de l'IUSAM-APdeBA jusqu'en 2021, j'ai fait partie du conseil éditorial de la Revue Argentine des Humanités et Sciences Sociales, et j'ai participé en tant que réviseur dans des publications liées à la méthodologie de recherche en Argentine.\n\nJe conçois l'espace analytique comme un lieu d'écoute rigoureuse et respectueuse, où il est possible de parler sans exigences ni promesses de bien-être immédiat, et où chaque processus se construit à son propre rythme.\n\nJe vous écoute.",
+                "Je suis actuellement professeur universitaire et directeur de l'aire de projection sociale à l'UNICOC (Colombie), espaces à partir desquels je poursuis l'interrogation de la clinique, de la souffrance et des discours contemporains sur la santé mentale.\n\nJ'ai développé mon activité clinique en présentiel et en ligne, en accompagnant des personnes dans différents pays d'Amérique et d'Europe. Parallèlement, j'ai participé activement à des espaces académiques et de recherche : j'ai été secrétaire du Département de recherche de l'IUSAM–APdeBA jusqu'en 2021, membre du comité éditorial de la Revista Argentina de Humanidades y Ciencias Sociales, et relecteur pour des publications en méthodologie de la recherche en Argentine.\n\nJe conçois l'espace analytique comme un lieu d'écoute rigoureuse et respectueuse, où il est possible de parler sans exigences ni promesses de bien-être immédiat, et où chaque processus se construit à son propre rythme.\n\nJe vous écoute.",
         },
         services: {
-            title: "Je peux vous aider avec ...",
+            title: "Services",
+            seeMore: "Voir plus",
+            seeLess: "Voir moins",
+            contactWhatsApp: "Contacter via WhatsApp",
+            contactEmail: "Contacter par email",
             items: [
                 {
-                    title: "Psychothérapie en ligne",
+                    title: "Psychanalyse avec des adultes",
                     description:
-                        "Prendre un chemin différent de celui qui vous a conduit à votre situation actuelle est possible. Depuis la Psychanalyse, un espace d'écoute est offert où vous pouvez parler, vous accompagnant dans le processus de traverser et de transformer ce qui vous cause de la souffrance.",
+                        "La psychanalyse avec des adultes est un dispositif clinique orienté vers le travail de la souffrance subjective, de l'angoisse et des conflits qui s'expriment de différentes manières dans la vie du sujet.\n\nIl s'agit d'un espace de parole et d'écoute, dans lequel chaque processus se construit de manière singulière et à son propre rythme, à partir de ce que le sujet apporte comme malaise, souffrance ou question.\n\nLes séances peuvent se dérouler en présentiel ou en ligne, selon le cadre convenu.",
+                    contact: {
+                        whatsapp: "+573142793431",
+                        email: "psicoanalisis@eduardomontenegro.com"
+                    }
                 },
                 {
-                    title: "Supervision clinique - professionnels",
+                    title: "Supervision clinique",
                     description:
-                        "Prendre un chemin différent de celui qui vous a conduit à votre situation actuelle est possible. Depuis la Psychanalyse, un espace d'écoute est offert où vous pouvez parler, vous accompagnant dans le processus de traverser et de transformer ce qui vous cause de la souffrance.",
+                        "La supervision clinique est un espace de travail destiné aux psychologues et aux psychanalystes engagés dans la pratique clinique et souhaitant interroger leur travail, leurs impasses et leurs décisions.\n\nElle consiste en un dispositif de lecture clinique permettant de situer la position de l'analyste, la place du transfert et les effets de l'intervention.\n\nLa supervision s'oriente à partir du cas, de la singularité de chaque rencontre clinique et des questions qui y émergent. Modalité en ligne ou en présentiel, selon le cadre établi.",
+                    contact: {
+                        email: "formacion@eduardomontenegro.com"
+                    }
                 },
                 {
-                    title: "Supervision clinique - professionnels",
+                    title: "Groupe d'étude",
                     description:
-                        "Prendre un chemin différent de celui qui vous a conduit à votre situation actuelle est possible. Depuis la Psychanalyse, un espace d'écoute est offert où vous pouvez parler, vous accompagnant dans le processus de traverser et de transformer ce qui vous cause de la souffrance.",
-                },
+                        "Le groupe d'étude propose un espace de lecture et de discussion clinique autour de la première rencontre du sujet avec l'analyste, dans une orientation lacanienne.\n\nSeront travaillés les modes d'entrée en consultation, la formulation de la demande, l'installation du dispositif analytique et les premiers effets du transfert.\n\nLe travail s'appuie sur des textes de Sigmund Freud, les séminaires de Jacques Lacan et la discussion clinique. Le groupe s'adresse aux étudiants avancés et aux professionnels souhaitant interroger la clinique à son point d'entrée. Modalité en ligne, fréquence bimensuelle, le mercredi de 9h à 11h (heure Colombie).",
+                    contact: {
+                        email: "formacion@eduardomontenegro.com"
+                    }
+                }
             ],
         },
         contact: {
@@ -354,69 +366,69 @@ export const translations = {
             title: "Questions fréquentes",
             categories: [
                 {
-                    name: "Sur la psychanalyse",
+                    name: "À propos de la psychanalyse",
                     items: [
                         {
-                            question: "Qu'est-ce que la psychanalyse?",
-                            answer: "La psychanalyse est une pratique clinique guidée par les enseignements de Freud et Lacan, centrée sur la parole et la singularité du sujet. Elle traite de la souffrance, de l'angoisse et des conflits qui se jouent dans l'expérience subjective.",
+                            question: "Qu'entend-on par psychanalyse ?",
+                            answer: "La psychanalyse est une pratique clinique orientée par l'enseignement de Freud et de Lacan, centrée sur la parole et sur la singularité du sujet. Elle s'occupe de la souffrance, de l'angoisse et des conflits qui se jouent dans l'expérience subjective du sujet.",
                         },
                         {
-                            question: "Quand consulter un psychanalyste?",
-                            answer: "Quand quelque chose du malaise, de l'angoisse ou de la répétition persiste et ne trouve pas de voie d'élaboration. La consultation ne nécessite pas de diagnostic préalable ni de demande claire, mais la possibilité d'interroger ce qui surgit dans l'expérience du sujet.",
+                            question: "Quand consulter un psychanalyste ?",
+                            answer: "Lorsque quelque chose du malaise, de l'angoisse ou de la répétition insiste et ne trouve pas de voie d'élaboration. La consultation ne requiert ni diagnostic préalable ni demande clairement formulée, mais la possibilité d'interroger ce qui fait irruption dans l'expérience du sujet.",
                         },
                         {
-                            question: "Une analyse a-t-elle une durée définie?",
-                            answer: "Non. Une analyse ne répond pas à une durée standard ni à un nombre fixe de séances. Son temps se construit en fonction du processus du sujet, de ce qui se joue dans le transfert et des effets qui s'y produisent.",
+                            question: "Une analyse a-t-elle une durée définie ?",
+                            answer: "Non. Une analyse ne répond ni à une durée standard ni à un nombre fixe de séances. Son temps se construit en fonction du processus du sujet, de ce qui se joue dans le transfert et des effets qui s'y produisent.",
                         },
                         {
-                            question: "En quoi la psychanalyse diffère-t-elle des autres pratiques de santé mentale?",
-                            answer: "La psychanalyse est guidée par la singularité du sujet et par la lecture de ce qui se joue dans la parole et dans le transfert. La direction du traitement se construit au cas par cas, à partir de ce qui émerge dans l'expérience clinique.",
+                            question: "En quoi la psychanalyse se distingue-t-elle des autres pratiques en santé mentale ?",
+                            answer: "La psychanalyse s'oriente par la singularité du sujet et par la lecture de ce qui se joue dans la parole et dans le transfert. La direction de la cure se construit au cas par cas, à partir de ce qui émerge dans l'expérience clinique et de la manière dont chaque sujet s'implique dans son dire.",
                         },
                         {
-                            question: "Comment les honoraires sont-ils établis?",
-                            answer: "Les honoraires sont établis lors du premier contact, sur la base d'un cadre initial. À titre de référence, la valeur par séance se situe entre 150 000 et 230 000 COP. Pour l'étranger, entre 50 et 70 USD ou 45 et 65 EUR. La valeur concrète est convenue au cas par cas.",
+                            question: "Comment les honoraires sont-ils établis ?",
+                            answer: "Les honoraires sont établis lors du premier contact, à partir d'un cadre initial. À titre indicatif, le tarif par séance se situe entre COP 150 000 et COP 230 000. Pour l'étranger, entre USD 50 et USD 70 ou EUR 45 et EUR 65. Le montant précis est convenu au cas par cas.",
                         },
                     ],
                 },
                 {
-                    name: "Sur la supervision",
+                    name: "À propos de la supervision clinique",
                     items: [
                         {
-                            question: "Quand est-il pertinent de superviser un cas?",
-                            answer: "La supervision est pertinente lorsque l'analyste rencontre des impasses, des doutes, des effets inattendus de l'intervention ou des questions cliniques. Elle ne répond pas seulement à des difficultés techniques, mais à la lecture de la position de l'analyste dans le cas.",
+                            question: "À quels moments est-il pertinent de superviser un cas ?",
+                            answer: "La supervision est pertinente lorsque l'analyste rencontre des impasses, des doutes, des effets inattendus de l'intervention ou des questions cliniques. Elle ne répond pas uniquement à des difficultés techniques, mais à la lecture de la position de l'analyste dans le cas.",
                         },
                         {
-                            question: "La supervision a-t-elle une fréquence établie?",
-                            answer: "La fréquence de la supervision n'est pas fixe. Elle s'établit selon le cadre convenu, les caractéristiques du cas et du professionnel. Elle peut être régulière ou ponctuelle, selon le moment clinique et la demande de supervision.",
+                            question: "La supervision a-t-elle une fréquence établie ?",
+                            answer: "La fréquence de la supervision n'est pas fixe. Elle est établie selon le cadre convenu, les caractéristiques du cas et du professionnel. Elle peut être régulière ou ponctuelle, selon le moment clinique et la demande de supervision.",
                         },
                         {
-                            question: "Quel matériel travaille-t-on en supervision clinique?",
-                            answer: "On travaille à partir de ce qui attire l'attention de l'analyste sur le cas: ses interventions, son angoisse, les impasses, les questions cliniques et les effets du transfert.",
+                            question: "Quel matériel est travaillé en supervision clinique ?",
+                            answer: "Le travail s'appuie sur ce qui retient l'attention de l'analyste dans le cas : ses interventions, son angoisse, les impasses, les questions cliniques et les effets du transfert.",
                         },
                         {
-                            question: "Quels sont les honoraires de la supervision clinique?",
-                            answer: "Les honoraires de supervision clinique sont de 100 000 COP par rencontre. Pour l'étranger, 30 USD ou 25 EUR. La modalité peut être en ligne ou en personne, selon le cadre convenu.",
+                            question: "Quels sont les honoraires de la supervision clinique ?",
+                            answer: "Les honoraires de la supervision clinique sont de COP 100 000 par rencontre. Pour l'étranger, USD 30 ou EUR 25. La modalité peut être en ligne ou en présentiel, selon le cadre convenu.",
                         },
                     ],
                 },
                 {
-                    name: "Sur le groupe d'étude",
+                    name: "À propos du groupe d'étude",
                     items: [
                         {
-                            question: "En quoi consiste un groupe d'étude en psychanalyse?",
-                            answer: "C'est un espace de lecture, de discussion et de travail conceptuel guidé par la psychanalyse, d'une perspective clinique. Le groupe se concentre sur des textes et des problèmes spécifiques, privilégiant l'élaboration collective et l'échange rigoureux entre les participants.",
+                            question: "En quoi consiste un groupe d'étude en psychanalyse ?",
+                            answer: "Il s'agit d'un espace de lecture, de discussion et de travail conceptuel orienté par la psychanalyse, depuis une perspective clinique. Le groupe se centre sur des textes et des problématiques spécifiques, en privilégiant l'élaboration collective et l'échange rigoureux entre les participants.",
                         },
                         {
-                            question: "Quelle est la durée du groupe d'étude?",
-                            answer: "Le groupe d'étude a une durée définie de vingt rencontres, avec une fréquence bimensuelle. Chaque rencontre dure deux heures. Le parcours s'organise dans un temps délimité, orienté vers un travail rigoureux sur le thème proposé.",
+                            question: "Quelle est la durée du groupe d'étude ?",
+                            answer: "Le groupe d'étude a une durée définie de vingt rencontres, à raison d'une fréquence bimensuelle. Chaque rencontre dure deux heures. Le parcours s'organise dans un temps délimité, orienté vers un travail rigoureux sur le thème proposé.",
                         },
                         {
-                            question: "Combien de membres peut avoir un groupe d'étude?",
-                            answer: "Le groupe d'étude a une capacité limitée. Il est composé d'un maximum de six participants, plus le coordinateur, afin de maintenir un espace de travail rigoureux, clinique et d'échange effectif.",
+                            question: "Combien de participants peut compter un groupe d'étude ?",
+                            answer: "Le groupe d'étude a un nombre de places limité. Il est composé d'un maximum de six participants, plus le coordinateur, afin de soutenir un espace de travail rigoureux, clinique et propice à un échange effectif.",
                         },
                         {
-                            question: "Quels sont les honoraires du groupe d'étude?",
-                            answer: "Les honoraires du groupe d'étude sont de 100 000 COP par rencontre. Pour l'étranger, 30 USD ou 25 EUR. La modalité est en ligne.",
+                            question: "Quels sont les honoraires du groupe d'étude ?",
+                            answer: "Les honoraires du groupe d'étude sont de COP 100 000 par rencontre. Pour l'étranger, USD 30 ou EUR 25. La modalité est en ligne.",
                         },
                     ],
                 },
