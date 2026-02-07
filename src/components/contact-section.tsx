@@ -75,7 +75,7 @@ export function ContactSection() {
             className="relative z-30 min-h-[150vh] bg-[#1a1a1a] shadow-[0_-20px_60px_rgba(0,0,0,0.3)]"
         >
             <div className="sticky top-0 flex min-h-screen items-center overflow-hidden py-24 lg:py-32">
-                <motion.div style={{ y: contentY }} className="mx-auto w-full max-w-6xl px-6 lg:px-8">
+                <motion.div style={{ y: contentY }} className="mx-auto w-full max-w-7xl px-6 lg:px-8">
                     <div className="grid gap-16 lg:grid-cols-2">
                         {/* Left side - Form */}
                         <div>

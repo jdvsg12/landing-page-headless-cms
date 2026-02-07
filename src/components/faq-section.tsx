@@ -169,7 +169,7 @@ export function FaqSection() {
 
     return (
         <section id="faq" className="relative z-10 bg-white py-24 lg:py-32">
-            <div className="mx-auto max-w-6xl px-6 lg:px-8">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 {/* Title with word-by-word reveal animation */}
                 <AnimatedTitle
                     text={faqContent.title}

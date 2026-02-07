@@ -10,7 +10,7 @@ export function AboutSection() {
 
     return (
         <section id="about" className="relative z-10 bg-background py-24 lg:py-32">
-            <div className="mx-auto max-w-6xl px-6 lg:px-8">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="grid items-start gap-8 lg:grid-cols-2 lg:gap-12">
                     {/* Text Content - Left Side with internal scroll */}
                     <motion.div

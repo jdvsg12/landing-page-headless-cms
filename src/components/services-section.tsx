@@ -44,7 +44,7 @@ export function ServicesSection() {
         >
             {/* Sticky container for content */}
             <div className="sticky top-0 flex min-h-screen items-center overflow-hidden py-20">
-                <motion.div style={{ y: contentY }} className="mx-auto w-full max-w-6xl px-6 lg:px-8">
+                <motion.div style={{ y: contentY }} className="mx-auto w-full max-w-7xl px-6 lg:px-8">
                     <motion.h2
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
