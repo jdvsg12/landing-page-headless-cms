@@ -22,7 +22,7 @@ export const metadata: Metadata = {
         type: "website",
         images: [
             {
-                url: "/image_c4bc3f.jpg",
+                url: "/image_c4bc3f.jpeg",
                 width: 1200,
                 height: 630,
                 alt: "Eduardo Montenegro Flórez - Psicólogo y Psicoanalista",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Eduardo Montenegro Flórez | Psicólogo y Psicoanalista",
         description: "Especialista en Psicopatología y Salud Mental. Ningún sufrimiento es insignificante.",
-        images: ["/image_c4bc3f.jpg"],
+        images: ["/image_c4bc3f.jpeg"],
     },
 
     icons: {
