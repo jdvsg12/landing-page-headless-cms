@@ -55,7 +55,7 @@ export function ServicesSection() {
                         {t.services.title}
                     </motion.h2>
 
-                    <div className="grid gap-8 md:grid-cols-3">
+                    <div className="grid gap-8 md:grid-cols-3 whitespace-pre-line">
                         {t.services.items.map((service, index) => (
                             <ServiceCard
                                 key={index}

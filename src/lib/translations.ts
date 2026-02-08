@@ -3,7 +3,7 @@ export type Language = "es" | "en" | "fr"
 export const translations = {
     es: {
         nav: {
-            about: "Acerca de mí",
+            about: "Sobre mí",
             services: "Servicios",
             faq: "FAQ",
             contact: "Contacto",
@@ -43,7 +43,7 @@ export const translations = {
                 {
                     title: "Supervisión clínica",
                     description:
-                        "La supervisión clínica es un espacio de trabajo dirigido a psicólogos/as y psicoanalistas que se encuentran ejerciendo la práctica clínica y desean interrogar su quehacer, sus impasses y sus decisiones.\n\nConsiste en un dispositivo de lectura clínica que permite situar la posición del analista, el lugar de la transferencia y los efectos de la intervención.\n\nLa supervisión se orienta por el caso, por lo singular de cada encuentro clínico y por las preguntas que allí emergen. Modalidad online o presencial, según encuadre.",
+                        "La supervisión clínica es un espacio de trabajo dirigido a psicólogos/as y psicoanalistas que se encuentran ejerciendo la práctica clínica y desean interrogar su quehacer, sus impasses y sus decisiones.\n\nConsiste en un dispositivo de lectura clínica que permite situar la posición del analista, el lugar de la transferencia y los efectos de la intervención.\n\nLa supervisión se orienta por el caso, por lo singular de cada encuentro clínico y por las preguntas que allí emergen. \n\nModalidad online o presencial, según encuadre.",
                     contact: {
                         email: "formacion@eduardomontenegro.com"
                     }
@@ -51,7 +51,7 @@ export const translations = {
                 {
                     title: "Grupo de estudio",
                     description:
-                        "El grupo de estudio propone un espacio de lectura y discusión clínica en torno al primer encuentro del sujeto con el analista, desde una orientación lacaniana.\n\nSe trabajarán los modos de llegada a la consulta, la formulación de la demanda, la instalación del dispositivo analítico y los primeros efectos de la transferencia.\n\nEl trabajo se realizará a partir de los textos de Sigmund Freud, los seminarios de Jacques Lacan, y de la discusión clínica. Está dirigido a estudiantes avanzados y profesionales interesados en interrogar la clínica en su punto de inicio. Modalidad online, frecuencia quincenal, miércoles de 9 a 11 a.m. (hora Colombia).",
+                        "El grupo de estudio propone un espacio de lectura y discusión clínica en torno al primer encuentro del sujeto con el analista, desde una orientación lacaniana.\n\nSe trabajarán los modos de llegada a la consulta, la formulación de la demanda, la instalación del dispositivo analítico y los primeros efectos de la transferencia.\n\nEl trabajo se realizará a partir de los textos de Sigmund Freud, los seminarios de Jacques Lacan, y de la discusión clínica. Está dirigido a estudiantes avanzados y profesionales interesados en interrogar la clínica en su punto de inicio. \n\nModalidad online, frecuencia quincenal, miércoles de 9 a 11 a.m. (hora Colombia).",
                     contact: {
                         email: "formacion@eduardomontenegro.com"
                     }

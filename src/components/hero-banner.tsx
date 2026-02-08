@@ -50,7 +50,7 @@ export function HeroBanner() {
                     </motion.div>
                 </div>
 
-                <div className="absolute bottom-24 left-0 right-0 pb-8 lg:bottom-28">
+                <div className="absolute bottom-1/12 left-0 right-0 pb-8 lg:bottom-1/12">
                     <ScrollVelocityRow baseVelocity={4} direction={-1}>
                         <span className="mx-4 text-7xl font-bold tracking-tight text-white/90 lg:text-9xl">EDUARDO MONTENEGRO</span>
                         <span className="mx-4 text-7xl font-bold tracking-tight text-white/90 lg:text-9xl">—</span>

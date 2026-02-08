@@ -8,28 +8,48 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-    title: "Eduardo Montenegro | Psicólogo - Psicoanalista",
+    title: "Eduardo Montenegro Flórez | Psicólogo y Psicoanalista",
     description:
-        "Psicólogo clínico con experiencia en atención presencial y online. Especialista en Psicopatología y Salud Mental.",
+        "Especialista en Psicopatología y Salud Mental. Acompañamiento en malestar persistente, duelos y experiencias que dejan huella. Ningún sufrimiento es insignificante.",
     generator: "v0.app",
+
+    openGraph: {
+        title: "Eduardo Montenegro Flórez | Psicólogo y Psicoanalista",
+        description: "Ningún sufrimiento es insignificante. Atención clínica para adultos, presencial y online.",
+        url: "https://www.eduardomontenegroflorez.com",
+        siteName: "Eduardo Montenegro Flórez",
+        locale: "es_CO",
+        type: "website",
+        images: [
+            {
+                url: "/image_c4bc3f.jpg",
+                width: 1200,
+                height: 630,
+                alt: "Eduardo Montenegro Flórez - Psicólogo y Psicoanalista",
+            },
+        ],
+    },
+
+    twitter: {
+        card: "summary_large_image",
+        title: "Eduardo Montenegro Flórez | Psicólogo y Psicoanalista",
+        description: "Especialista en Psicopatología y Salud Mental. Ningún sufrimiento es insignificante.",
+        images: ["/image_c4bc3f.jpg"],
+    },
+
     icons: {
         icon: [
             {
-                url: "/icon-light-32x32.png",
+                url: "/icon-black.png",
                 media: "(prefers-color-scheme: light)",
             },
             {
-                url: "/icon-dark-32x32.png",
+                url: "/icon-white.png",
                 media: "(prefers-color-scheme: dark)",
             },
-            {
-                url: "/icon.svg",
-                type: "image/svg+xml",
-            },
         ],
-        apple: "/apple-icon.png",
     },
-}
+};
 
 export default function RootLayout({
     children,
