@@ -21,7 +21,7 @@ export function HeroBanner() {
             </div>
 
             <div className="relative z-10 flex h-full flex-col">
-                <div className="flex flex-1 flex-col items-center justify-center px-6 lg:flex-row lg:items-center lg:justify-center lg:gap-16 lg:px-8">
+                <div className="flex flex-1 flex-col items-center justify-center px-6 lg:flex-row lg:items-center lg:justify-center lg:gap-16 lg:px-8 pb-48 lg:pb-0">
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
