@@ -59,7 +59,7 @@ export const translations = {
             ],
         },
         contact: {
-            title: "Comencemos un proyecto juntos",
+            title: "Dejame un mensaje",
             name: "¿Cuál es tu nombre?",
             namePlaceholder: "Tu nombre",
             email: "¿Cuál es tu correo?",
@@ -196,7 +196,7 @@ export const translations = {
             ],
         },
         contact: {
-            title: "Let's start a project together",
+            title: "Leave me a message",
             name: "What is your name?",
             namePlaceholder: "Your name",
             email: "What is your Email?",
@@ -347,7 +347,7 @@ export const translations = {
             ],
         },
         contact: {
-            title: "Commençons un projet ensemble",
+            title: "Laissez-moi un message",
             name: "Quel est votre nom?",
             namePlaceholder: "Votre nom",
             email: "Quel est votre Email?",

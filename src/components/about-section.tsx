@@ -29,7 +29,7 @@ export function AboutSection() {
 
                         {/* Perfil */}
                         <div>
-                            <h3 className="mb-4 text-xl font-semibold text-foreground">
+                            <h3 className="mb-4 text-xl font-semibold text-foreground whitespace-nowrap">
                                 {t.profile.title}
                             </h3>
                             <p className="text-lg leading-relaxed text-muted-foreground whitespace-pre-line">

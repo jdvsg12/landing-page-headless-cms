@@ -171,6 +171,7 @@ export function ContactSection() {
                             >
                                 <h3 className="mb-6 text-2xl font-semibold text-white">{t.contact.contactTitle}</h3>
                                 <div className="mb-8 space-y-2">
+                                    <p className="text-neutral-400">psicoanalisis@eduardomontenegro.com</p>
                                     <p className="text-neutral-400">formacion@eduardomontenegro.com</p>
                                     <p className="text-neutral-400">+57 3142793431</p>
                                 </div>
@@ -192,7 +193,7 @@ export function ContactSection() {
                                         LinkedIn
                                     </motion.a>
                                     <motion.a
-                                        href="https://www.youtube.com/@psicologiaycultura"
+                                        href="https://www.youtube.com/@eduardomontenegroff"
                                         whileHover={{ x: 4, color: "#ffffff" }}
                                         className="block text-neutral-400 transition-colors"
                                     >
