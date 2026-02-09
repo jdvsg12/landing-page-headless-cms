@@ -37,9 +37,9 @@ export function Navbar() {
     ]
 
     const socialLinks = [
-        { name: "Instagram", href: "https://instagram.com" },
-        { name: "LinkedIn", href: "https://linkedin.com" },
-        { name: "YouTube", href: "https://youtube.com" },
+        { name: "Instagram", href: "https://www.instagram.com/eduardomontenegroff" },
+        { name: "LinkedIn", href: "https://www.linkedin.com/in/montenegroedu/" },
+        { name: "YouTube", href: "https://www.youtube.com/@eduardomontenegroff" },
     ]
 
     const updateButtonPosition = useCallback(() => {
@@ -67,7 +67,6 @@ export function Navbar() {
                 const servicesBottom = servicesTop + servicesSection.offsetHeight
                 const isInServicesRange = scrollY >= servicesTop - 200 && scrollY < servicesBottom - 200
                 setIsInServices(isInServicesRange)
-                console.log("Services detection by scroll:", { scrollY, servicesTop, servicesBottom, isInServicesRange })
             }
 
             const contactSection = document.getElementById("contact")
@@ -109,8 +108,6 @@ export function Navbar() {
     const isDarkSection = (isInHero || isInContact) && !isInServices
     const textColorClass = isDarkSection ? "text-white" : "text-foreground"
 
-    console.log("Navbar state:", { isInHero, isInServices, isInContact, isDarkSection, textColorClass })
-
     const navbarBgClass = isInContact
         ? "bg-[#1a1a1a]"
         : isInServices
@@ -118,8 +115,6 @@ export function Navbar() {
             : isScrolled && !isInHero
                 ? "bg-white/60 backdrop-blur-2xl"
                 : "bg-transparent"
-
-    console.log("Navbar classes applied:", { navbarBgClass, isInServices, isInContact, isInHero })
 
     const menuButtonBgClass = isMobileMenuOpen
         ? "bg-white"
