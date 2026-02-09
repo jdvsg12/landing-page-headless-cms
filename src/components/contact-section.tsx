@@ -6,6 +6,7 @@ import { AnimatedInput } from "@/components/ui/animated-input"
 import { useLanguage } from "@/lib/language-context"
 import { getTranslation } from "@/lib/translations"
 import { AnimatedSelect } from "./ui/animated-select"
+import { socialLinks } from "@/lib/social-links"
 
 export function ContactSection() {
     const sectionRef = useRef<HTMLDivElement>(null)
@@ -178,27 +179,18 @@ export function ContactSection() {
 
                                 <h3 className="mb-6 text-2xl font-semibold text-white">{t.contact.socialMedia}</h3>
                                 <div className="space-y-2">
-                                    <motion.a
-                                        href="https://www.instagram.com/eduardomontenegroff"
-                                        whileHover={{ x: 4, color: "#ffffff" }}
-                                        className="block text-neutral-400 transition-colors"
-                                    >
-                                        Instagram
-                                    </motion.a>
-                                    <motion.a
-                                        href="https://www.linkedin.com/in/montenegroedu/"
-                                        whileHover={{ x: 4, color: "#ffffff" }}
-                                        className="block text-neutral-400 transition-colors"
-                                    >
-                                        LinkedIn
-                                    </motion.a>
-                                    <motion.a
-                                        href="https://www.youtube.com/@eduardomontenegroff"
-                                        whileHover={{ x: 4, color: "#ffffff" }}
-                                        className="block text-neutral-400 transition-colors"
-                                    >
-                                        Youtube
-                                    </motion.a>
+                                    {socialLinks.map((link) => (
+                                        <motion.a
+                                            key={link.name}
+                                            href={link.href}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            whileHover={{ x: 4, color: "#ffffff" }}
+                                            className="block text-neutral-400 transition-colors"
+                                        >
+                                            {link.label}
+                                        </motion.a>
+                                    ))}
                                 </div>
                             </motion.div>
                         </div>

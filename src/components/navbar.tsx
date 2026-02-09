@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { ChevronDown } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 import { getTranslation, type Language } from "@/lib/translations"
+import { socialLinks, type SocialLink } from "@/lib/social-links"
 
 const languages: { code: Language; label: string }[] = [
     { code: "es", label: "ESP" },
@@ -34,12 +35,6 @@ export function Navbar() {
         { name: t.nav.services, href: "#services" },
         { name: t.nav.faq, href: "#faq" },
         { name: t.nav.contact, href: "#contact" },
-    ]
-
-    const socialLinks = [
-        { name: "Instagram", href: "https://www.instagram.com/eduardomontenegroff" },
-        { name: "LinkedIn", href: "https://www.linkedin.com/in/montenegroedu/" },
-        { name: "YouTube", href: "https://www.youtube.com/@eduardomontenegroff" },
     ]
 
     const updateButtonPosition = useCallback(() => {
@@ -323,7 +318,7 @@ interface MobileMenuProps {
     onClose: () => void
     buttonPosition: { x: number; y: number }
     navLinks: Array<{ name: string; href: string }>
-    socialLinks: Array<{ name: string; href: string }>
+    socialLinks: SocialLink[]
     language: Language
     onLanguageChange: (lang: Language) => void
     t: any
@@ -414,7 +409,7 @@ function MobileMenu({
                                                     rel="noopener noreferrer"
                                                     className="text-sm text-white transition-colors hover:text-neutral-400"
                                                 >
-                                                    {link.name}
+                                                    {link.label}
                                                 </a>
                                             </li>
                                         ))}
